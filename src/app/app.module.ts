@@ -9,13 +9,16 @@ import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { HttpModule } from "@angular/http";
 import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
+import { CommandAddFileComponent } from './command-add-file/command-add-file.component';
+import { DragulaModule } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    CommandAddFileComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule,
     FormsModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    DragulaModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

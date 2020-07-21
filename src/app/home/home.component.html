@@ -1,10 +1,11 @@
 <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
-  <a href="#"><i class="fas fa-book mr-2"></i>เอกสารเวียนทราบ</a>
-  <a href="#"><i class="fas fa-book mr-2"></i>เอกสารส่งออก</a>
-  <a href="#"><i class="fas fa-book mr-2"></i>เอกสารขออนุมัติ</a>
-  <a href="#"><i class="fas fa-book mr-2"></i>สั่งการ/เวียนทราบ</a>
-  <a href="#"><i class="fas fa-book mr-2"></i>รายงานการใช้กระดาษ</a>
+  <a href="#"><i class="fas fa-comment-medical fa-lg mr-2"></i>คลังเอกสาร</a>
+  <a href="#">เอกสารเวียนทราบ</a>
+  <a href="#">เอกสารส่งออก</a>
+  <a href="#">เอกสารขออนุมัติ</a>
+  <a [routerLink]="['/command-add-file']">สั่งการ/เวียนทราบ</a>
+  <a href="#">รายงานการใช้กระดาษ</a>
 </div>
 
 <div class="container-main" id="main">
