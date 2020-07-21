@@ -11,6 +11,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { HomeComponent } from './home/home.component';
 import { CommandAddFileComponent } from './command-add-file/command-add-file.component';
 import { DragulaModule } from 'ng2-dragula';
+import { CommandSelectUserComponent } from './command-select-user/command-select-user.component';
+import { CommandCheckComponent } from './command-check/command-check.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { DragulaModule } from 'ng2-dragula';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    CommandAddFileComponent
+    CommandAddFileComponent,
+    CommandSelectUserComponent,
+    CommandCheckComponent
   ],
   imports: [
     BrowserModule,
