@@ -98,5 +98,18 @@ export class BackendService {
           resolve(data);
         });
     });
+
+  }
+  getDocumentByOwner(id): Promise<any> {
+    let headerSpecify = this.httpOptions;
+    headerSpecify.params = { id };
+    return new Promise((resolve) => {
+      this.http
+        .get<any>(backendUrl + "document/get-by-owner", headerSpecify)
+        .pipe()
+        .subscribe((data) => {
+          resolve(data);
+        });
+    });
   }
 }
