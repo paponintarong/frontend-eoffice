@@ -3,17 +3,15 @@ import * as jwt_decode from "jwt-decode";
 import { BackendService } from '../backend.service';
 import { environment } from "../../environments/environment";
 
-
 @Component({
-  selector: 'app-command-check',
-  templateUrl: './command-check.component.html',
-  styleUrls: ['./command-check.component.scss']
+  selector: 'app-owner-list-document',
+  templateUrl: './owner-list-document.component.html',
+  styleUrls: ['./owner-list-document.component.scss']
 })
-export class CommandCheckComponent implements OnInit {
+export class OwnerListDocumentComponent implements OnInit {
   userData: any;
   documentList: Array<any>;
   backendUrl = environment.backendUrl;
-  actionNumber: number = 0;
   constructor(private backendService: BackendService) { }
 
   ngOnInit(): void {
@@ -22,9 +20,6 @@ export class CommandCheckComponent implements OnInit {
       console.log(data.dataList);
       this.documentList = data.dataList;
     });
-    this.backendService.getCountDocumentByUser(this.userData.id).then(data => {
-      this.actionNumber = data.dataList.users_action;
-    })
   }
 
   openNav() {
@@ -55,5 +50,4 @@ export class CommandCheckComponent implements OnInit {
     let options = { hour: '2-digit', minute: '2-digit' };
     return dateFormal.toLocaleTimeString('th-TH', options) + " น.";
   }
-
 }
